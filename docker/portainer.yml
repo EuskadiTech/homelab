@@ -20,5 +20,3 @@ networks:
 
 volumes:
   portainer_data:
-    external:
-      name: portainer_data
