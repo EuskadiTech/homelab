@@ -4,13 +4,12 @@ services:
   homer:
     image: b4bz/homer
     volumes:
-      - ./volumes/homer/assets:/www/assets
-      - ../homer/config.yml:/www/assets/config.yml
+      - ../homer:/www/assets:ro
     ports:
       - 8080:8080
     user: 1000:1000
     environment:
-      - INIT_ASSETS=1
+      - INIT_ASSETS=0
     networks:
       proxy:
 
